@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clustering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}"> <!-- Asegúrate de que este archivo exista -->
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Clusterización de Repositorios</h1>
+            <div class="form-group">
+                <label for="repos">Repositorios:</label>
+                <textarea id="repos" placeholder="Pega los repositorios aquí..."></textarea>
+                <div class="button-container">
+                    <button class="generate-btn">Generar</button>
+                </div>
+            </div>
+
+            <div class="output-box-small"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="right-panel">
+            <div class="nav-buttons">
+                <button>&lt;</button>
+                <button>&gt;</button>
+            </div>
+            <div class="output-box-large"></div>
+        </div>
+    </div>
+</body>
+</html>

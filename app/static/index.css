@@ -1,0 +1,132 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f7ff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    height: 100vh;          /* Ocupa toda la altura de la pantalla */
+    width: 100vw;           /* Ocupa todo el ancho de la pantalla */
+}
+
+
+.left-panel {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.left-panel h1 {
+    font-size: 18px;
+    color: #0056d2;
+    margin-bottom: 10px;
+}
+
+.left-panel label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #0056d2;
+}
+
+.form-group {
+    width: 519px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+textarea {
+    width: 519px;
+    height: 150px;
+    resize: none;
+    background-color: #d3d3d3;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Envuelve el botón y lo alinea al borde del textarea */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.generate-btn {
+    background-color: #1976f2;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.generate-btn:hover {
+    background-color: #0b5ed7;
+}
+
+/* Caja de salida pequeña */
+.output-box-small {
+    width: 519px;
+    height: 40%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Separador vertical */
+.divider {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-20.5px); /* Centrar línea exacta */
+    width: 2px;
+    height: 85%;
+    background-color: #1976f2;
+    z-index: 1;
+}
+
+
+.right-panel {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Botones de navegación */
+.nav-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.nav-buttons button {
+    background-color: #1976f2;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+/* Caja de salida grande */
+.output-box-large {
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
