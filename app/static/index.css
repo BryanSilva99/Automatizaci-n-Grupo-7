@@ -1,34 +1,45 @@
+/* Importar Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Global reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #f0f7ff;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
-    height: 100vh;          /* Ocupa toda la altura de la pantalla */
-    width: 100vw;           /* Ocupa todo el ancho de la pantalla */
+    height: 100vh;
+    width: 100vw;
 }
 
-
+/* -------------------------- */
+/* PANEL IZQUIERDO */
+/* -------------------------- */
 .left-panel {
     width: 50%;
     padding: 20px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
+    overflow-y: auto;
+    font-family: 'Roboto', sans-serif;
+    /* ✅ Roboto solo aquí */
 }
 
-
 .left-panel h1 {
-    font-size: 18px;
+    font-size: 24px;
     color: #0056d2;
-    margin-bottom: 10px;
 }
 
 .left-panel label {
@@ -38,14 +49,13 @@ body {
 }
 
 .form-group {
-    width: 519px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 textarea {
-    width: 519px;
+    width: 100%;
     height: 150px;
     resize: none;
     background-color: #d3d3d3;
@@ -53,62 +63,59 @@ textarea {
     border-radius: 6px;
     padding: 10px;
     font-size: 15px;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Envuelve el botón y lo alinea al borde del textarea */
+/* Botón */
 .button-container {
     display: flex;
     justify-content: flex-end;
-    margin-top: 8px;
 }
 
 .generate-btn {
     background-color: #1976f2;
     color: white;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
 }
+
 .generate-btn:hover {
     background-color: #0b5ed7;
 }
 
-/* Caja de salida pequeña */
+/* Output izquierdo */
 .output-box-small {
-    width: 519px;
     height: 40%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-/* Separador vertical */
-.divider {
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translateX(-20.5px); /* Centrar línea exacta */
-    width: 2px;
-    height: 85%;
-    background-color: #1976f2;
-    z-index: 1;
-}
-
-
+/* -------------------------- */
+/* PANEL DERECHO */
+/* -------------------------- */
 .right-panel {
     width: 50%;
     padding: 20px;
-    box-sizing: border-box;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-/* Botones de navegación */
+/* Botones flotantes */
 .nav-buttons {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .nav-buttons button {
@@ -117,16 +124,41 @@ textarea {
     border: none;
     padding: 6px 10px;
     border-radius: 5px;
-    margin-left: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-/* Caja de salida grande */
+/* Output derecho */
 .output-box-large {
-    width: 100%;
-    height: 80%;
+    flex: 1;
     background-color: white;
     border-radius: 15px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
+    padding: 1.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Imagen de topología */
+.output-box-large img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------- */
+/* DIVISOR */
+/* -------------------------- */
+.divider {
+    width: 2px;
+    background-color: #1976f2;
+    height: 90%;
+    align-self: center;
 }
